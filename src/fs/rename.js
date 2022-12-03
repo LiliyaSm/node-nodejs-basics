@@ -13,7 +13,7 @@ const rename = async () => {
   );
 
   try {
-    //make sure that properFilename.md doesn't already exists
+    //make sure that properFilename.md doesn't already exist
     if (fs.existsSync(newFilenamePath)) throw new Error(FS_ERROR_MSG);
     await renameFS(wrongFilenamePath, newFilenamePath);
   } catch {
@@ -22,5 +22,3 @@ const rename = async () => {
 };
 
 await rename();
-
-// rename.js - implement function that renames file wrongFilename.txt to properFilename with extension .md (if there's no file wrongFilename.txt or properFilename.md already exists Error with message FS operation failed must be thrown)
